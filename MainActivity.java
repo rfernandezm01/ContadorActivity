@@ -1,5 +1,3 @@
-package com.example.contador;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -10,23 +8,24 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     int contador;
-    TextView Texto;
+    TextView contador1;
     Button Click;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        contador = 0;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Texto = findViewById(R.id.texto);
-        Click = findViewById(R.id.Click);
+        contador1 = findViewById(R.id.contador1);
+        Click = findViewById(R.id.mas1);
 
         Click.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 contador++;
-                Texto.setText("Has clicado " + contador + " veces");
+                contador1.setText("Has clicado " + contador + " veces");
             }
         });
     }
