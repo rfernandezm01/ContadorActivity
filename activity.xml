@@ -5,7 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <!---Reset All -->
+    <TextView
+        android:id="@+id/contadorall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/contador1"
+        app:layout_constraintEnd_toStartOf="@id/resetall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/resetall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@id/reset1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/contadorall"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+ <!--- Primera Linea -->
     <TextView
         android:id="@+id/contador1"
         android:layout_width="wrap_content"
@@ -43,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/contador3"
         app:layout_constraintEnd_toStartOf="@id/mas2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/contador1" />
@@ -56,17 +78,82 @@
         app:layout_constraintTop_toBottomOf="@id/mas1"
         app:layout_constraintEnd_toStartOf="@id/reset2"
         app:layout_constraintStart_toEndOf="@id/contador2"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@id/mas3"/>
 
     <Button
         android:id="@+id/reset2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/reset3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/mas2"
         app:layout_constraintTop_toBottomOf="@id/reset1"/>
+
+    <!--- Tercera Fila -->
+
+    <TextView
+        android:id="@+id/contador3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/contador4"
+        app:layout_constraintEnd_toStartOf="@id/mas3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contador2" />
+
+    <Button
+        android:id="@+id/mas3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintTop_toBottomOf="@id/mas2"
+        app:layout_constraintEnd_toStartOf="@id/reset3"
+        app:layout_constraintStart_toEndOf="@id/contador3"
+        app:layout_constraintBottom_toTopOf="@id/mas4"/>
+
+    <Button
+        android:id="@+id/reset3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toTopOf="@id/reset4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mas3"
+        app:layout_constraintTop_toBottomOf="@id/reset2"/>
+
+    <!--- Cuarta Fila -->
+
+    <TextView
+        android:id="@+id/contador4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/mas4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contador3" />
+
+    <Button
+        android:id="@+id/mas4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintTop_toBottomOf="@id/mas3"
+        app:layout_constraintEnd_toStartOf="@id/reset4"
+        app:layout_constraintStart_toEndOf="@id/contador4"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/reset4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/mas4"
+        app:layout_constraintTop_toBottomOf="@id/reset3"/>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
